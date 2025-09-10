@@ -14,13 +14,355 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #000000;
   }
 }
-
+*{
+  --background-color-box: rgb(0, 0, 0);
+}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.gal-box{
+  transform-style: preserve-3d;
+}
+/* .gal-box::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  background-color: rgba(214, 0, 0, 0.644);
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.gal-box:hover::before{
+  transform: scale(1.03);
+  transform-origin: center;
+} */
+
+.rt-card{
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: 50%;
+  transform: translate3d(0, 200px, 0) rotate(-3deg) rotateY(45deg);
+}
+.drop-outer{
+  width: 100%;
+  aspect-ratio: 1/1;
+  transform-origin: left;
+   
+}
+.drop {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #00bfff;
+  border-radius: 50% / 0% 50% 50%  50%;
+  transform-origin: center;
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.curve-box-tl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0 0 2rem 0;
+    background-color: var(--background-color-box);
+    transition: transform 0.3s ease-in-out;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      width: 100%;
+      height: 100%;
+      border-radius: 2rem 0 0  0;
+      box-shadow: -2px -32px 1px var(--background-color-box);
+      transition: transform 0.3s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      width: 100%;
+      height: 100%;
+      border-radius: 2rem 0 0  0;
+      box-shadow:-32px -2px 1px var(--background-color-box);
+      
+      transition: transform 0.3s ease-in-out;
+    }
+}
+.curve-box-tr{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20rem;
+    height: 8rem;
+    border-radius: 0 0 0 2rem;
+    background-color: var(--background-color-box);
+    transition: transform 0.3s ease-in-out;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      width: 100%;
+      height: 100%;
+      border-radius:  0 2rem 0  0;
+      box-shadow: 2px -32px 1px var(--background-color-box);
+      transition: transform 0.3s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      width: 100%;
+      height: 100%;
+      border-radius:  0 2rem 0  0;
+      box-shadow: 32px -2px 1px var(--background-color-box);
+      
+      transition: transform 0.3s ease-in-out;
+    }
+}
+.curve-box-br{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16rem;
+    height: 8rem;
+    border-radius: 2rem 0 0 0 ;
+    background-color: var(--background-color-box);
+    transition: transform 0.3s ease-in-out;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      width: 100%;
+      height: 100%;
+      border-radius:  0  0 2rem 0;
+      box-shadow: 2px 32px  1px var(--background-color-box);
+      transition: transform 0.3s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(-100%);
+      width: 100%;
+      height: 100%;
+      border-radius:  0  0 2rem 0;
+      box-shadow: 32px 2px 1px var(--background-color-box);
+      
+      transition: transform 0.3s ease-in-out;
+    }
+}
+.curve-box-bl{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 16rem;
+    height: 8rem;
+    border-radius: 0 2rem 0 0 ;
+    background-color: var(--background-color-box);
+    transition: transform 0.3s ease-in-out;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);
+      width: 100%;
+      height: 100%;
+      border-radius:  0  0 0 2rem;
+      box-shadow: -1px 32px  1px var(--background-color-box);
+      transition: transform 0.3s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(-100%);
+      width: 100%;
+      height: 100%;
+      border-radius:  0  0 0 2rem;
+      box-shadow: -32px 2px 1px var(--background-color-box);
+      
+      transition: transform 0.3s ease-in-out;
+    }
+}
+
+
+.depth-gradient{
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(180deg, #00000000 , #000000 50%, #0000);
+  inset: 25% 0%;
+}
+
+.immersive-text{
+  
+  z-index: 0;
+  perspective-origin: -140%;
+  transform-origin: 50% 0%;
+  transform-style: preserve-3d;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 250vw;
+  display: flex;
+  position: absolute;
+  inset: 0% 0% auto;
+  transform: rotateX(-90deg);
+}
+
+.immersive-text-inner{
+  box-sizing: border-box;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* height: 8%; */
+  display: flex;
+  overflow: hidden;
+}
+.exper-text{
+  
+  z-index: 0;
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  height: 250vw;
+  display: flex;
+  position: absolute;
+  inset: auto 0% 0%;
+  transform: rotateX(90deg);
+}
+
+.exper-text-inner{
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  /* height: 8%; */
+  display: flex;
+  overflow: hidden;
+}
+
+.about{
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56%;
+    height: 100%;
+    background-image: url("/images/about.jpg");
+    background-size: cover;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background-image: url("/images/dark-bg.jpg");
+  }
+}
+
+.image-cover{
+  -webkit-mask: url("/images/mask.svg");
+  mask: url("/images/mask.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+.image-cover2{
+  -webkit-mask: url("/images/mask2.svg");
+  mask: url("/images/mask2.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+
+.box:not(:hover) .box-front {
+  background-color: #99968c;
+}
+.box .box-font{
+  background-color: #fffbeb;
+}
+
+.scene {
+  width: 300px;
+  height: 300px;
+  perspective: 600px; /* Controls how deep the 3D effect appears */
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000;
+}
+
+/* The 3D box container */
+.box-3d {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d; /* Allows children to be transformed in 3D space */
+  transform: rotateX(-30deg) rotateY(30deg); /* Initial rotation */
+  animation: rotate 5s infinite linear; /* Optional: Add rotation animation */
+}
+
+/* The faces of the cube */
+.box-front, .box-back, .box-right, .box-left, .box-top, .box-bottom {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #ddd;
+  backface-visibility: hidden; /* Hides the back face of each box when rotated */
+}
+
+/* Positioning each face */
+.box-front  { transform: translateZ(100px); background-color: rgba(255, 0, 0, 0.7); }
+.box-back   { transform: rotateY(180deg) translateZ(100px); background-color: rgba(0, 255, 0, 0.7); }
+.box-right  { transform: rotateY(90deg) translateZ(100px); background-color: rgba(0, 0, 255, 0.7); }
+.box-left   { transform: rotateY(-90deg) translateZ(100px); background-color: rgba(255, 255, 0, 0.7); }
+.box-top    { transform: rotateX(90deg) translateZ(100px); background-color: rgba(0, 255, 255, 0.7); }
+.box-bottom { transform: rotateX(-90deg) translateZ(100px); background-color: rgba(255, 0, 255, 0.7); }
+
+/* Optional: rotate the box for animation */
+@keyframes rotate {
+  from {
+    transform: rotateX(-30deg) rotateY(30deg);
+  }
+  to {
+    transform: rotateX(-30deg) rotateY(390deg); /* Rotate 360 + 30 degrees */
+  }
 }
