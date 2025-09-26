@@ -38,7 +38,7 @@ const Hero = () => {
       },
     });
     tl.to(container.current, {
-        yPercent: 50,
+        yPercent: 35,
         ease: '',
     }
     , "+=0.5"
