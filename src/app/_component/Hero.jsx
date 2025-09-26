@@ -1,9 +1,9 @@
 'use client'
-import image1 from '@/assets/page2/images/mimage1.jpg'
-import image2 from '@/assets/page2/images/mimage2.jpg'
-import image3 from '@/assets/page2/images/mimage3.jpg'
-import image4 from '@/assets/page2/images/mimage4.jpg'
-import image5 from '@/assets/page2/images/mimage5.jpg'
+import image1 from '@/assets/page2/images/mimage1.webp'
+import image2 from '@/assets/page2/images/mimage2.webp'
+import image3 from '@/assets/page2/images/mimage3.webp'
+import image4 from '@/assets/page2/images/mimage4.webp'
+import image5 from '@/assets/page2/images/mimage5.webp'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/SplitText'
@@ -39,7 +39,7 @@ const Hero = () => {
     });
     tl.to(container.current, {
         yPercent: 50,
-        ease: 'power1.inOut',
+        ease: '',
     }
     , "+=0.5"
     )
@@ -50,7 +50,7 @@ const Hero = () => {
         stagger: {
             each: 0.05,
         },
-    }, "-=.2")
+    }, "-=.5")
     tl.from(split2.chars, {
         opacity: 0,
         y: 20,
@@ -74,7 +74,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image1} alt="Card Image 1" fill className="object-cover" priority />
+        <Image src={image1} alt="Card Image 1" fill className="object-cover" />
       </div>
 
    
@@ -85,7 +85,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image2} alt="Card Image 2" fill className="object-cover" priority />
+        <Image src={image2} alt="Card Image 2" fill className="object-cover" />
       </div>
 
     
@@ -96,7 +96,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image3} alt="Card Image 3" fill className="object-cover" priority />
+        <Image src={image3} alt="Card Image 3" fill className="object-cover" />
       </div>
 
      
@@ -107,7 +107,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image4} alt="Card Image 4" fill className="object-cover" priority />
+        <Image src={image4} alt="Card Image 4" fill className="object-cover" />
       </div>
 
       
@@ -118,7 +118,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image5} alt="Card Image 5" fill className="object-cover" priority />
+        <Image src={image5} alt="Card Image 5" fill className="object-cover" />
       </div>
     </div>
     </section>
