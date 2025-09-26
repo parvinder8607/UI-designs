@@ -11,6 +11,7 @@ import Section7 from './_section/Section7';
 import Section8 from './_section/Section8';
 import Section9 from './_section/Section9';
 import Section10 from './_section/Section10';
+import Focus from './_section/Focus';
 
 
 
@@ -26,6 +27,7 @@ const page = () => {
   return (
     <main className={`${raleway.className}`}>
    {/* <Section10 /> */}
+   {/* <Focus /> */}
     <HeroPage />
     <Section2 />
     <Section3 />

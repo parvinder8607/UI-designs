@@ -45,9 +45,9 @@ const Section5 = () => {
 
     const horizontalTween = gsap.fromTo(
       slideRef.current,
-      { x: window.innerWidth }, // start fully off screen right
+      { x: window.innerWidth }, 
       {
-        x: -totalWidth, // move all the way to left so last card exits
+        x: -totalWidth, 
         ease: "none",
         scrollTrigger: {
           trigger: container.current,
@@ -61,7 +61,7 @@ const Section5 = () => {
       }
     );
   
-    // Your card animations stay the same
+    
     cards.forEach((card) => {
       gsap.fromTo(
         card,
@@ -125,6 +125,7 @@ const Section5 = () => {
             className="rt-card relative w-[400px] h-[600px] shrink-0 rounded-xl shadow-xl "
           >
             <Image src={img} alt={`Image ${i + 1}`} fill className="object-cover rounded-xl" />
+
             </div>
         ))}
       </div>

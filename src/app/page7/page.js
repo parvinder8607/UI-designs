@@ -1,12 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
-import Header from './section/Header'
+import Canvas from './section/Canvas'
+import ScrollAnimation from './section/ScrollAnimation'
+import ScrollTextAnimation from './section/ScrollTextAnimation'
+import FlipAnimation from './section/FlipAnimation'
 
 const page = () => {
   return (
     <>
     <main>
-      <Header />
+      <Canvas />
+      <ScrollAnimation />
+      <ScrollTextAnimation />
+      <FlipAnimation />
     </main>  
     </>
   )
