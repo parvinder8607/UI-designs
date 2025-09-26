@@ -74,7 +74,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image1} alt="Card Image 1" fill className="object-cover" />
+        <Image src={image1} alt="Card Image 1" fill className="object-cover" priority />
       </div>
 
    
@@ -85,7 +85,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image2} alt="Card Image 2" fill className="object-cover" />
+        <Image src={image2} alt="Card Image 2" fill className="object-cover" priority />
       </div>
 
     
@@ -96,7 +96,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image3} alt="Card Image 3" fill className="object-cover" />
+        <Image src={image3} alt="Card Image 3" fill className="object-cover" priority />
       </div>
 
      
@@ -107,7 +107,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image4} alt="Card Image 4" fill className="object-cover" />
+        <Image src={image4} alt="Card Image 4" fill className="object-cover" priority />
       </div>
 
       
@@ -118,7 +118,7 @@ const Hero = () => {
         }}
         className="H_card overflow-hidden absolute w-1/8 h-1/3 bg-white rounded-3xl"
       >
-        <Image src={image5} alt="Card Image 5" fill className="object-cover" />
+        <Image src={image5} alt="Card Image 5" fill className="object-cover" priority />
       </div>
     </div>
     </section>
